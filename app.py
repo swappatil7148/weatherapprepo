@@ -15,7 +15,10 @@ def get_weatherdata():
          'units' : request.form.get('units')}
     response = requests.get(url,params=params)
     data = response.json()
-    return f"Data : {data}"
+    city = data['name']
+    data_main = data['main']
+    max_temp = data_main['max_temp']  
+    return f"For City of : {city} hightest temp is {max_temp}"
 
 
 
