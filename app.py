@@ -17,7 +17,7 @@ def get_weatherdata():
     data = response.json()
     city = data['name']
     data_main = data['main']
-    max_temp = data_main['max_temp']  
+    max_temp = data_main['temp_max']  
     return f"For City of : {city} hightest temp is {max_temp}"
 
 
